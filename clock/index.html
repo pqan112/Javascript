@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #time {
+      text-align: center;
+      font-size: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="time"></div>
+  <script>
+    function clock() {
+      const today = new Date()
+      let hour = today.getHours()
+      let minute = today.getMinutes()
+      let second = today.getSeconds()
+
+      if (hour < 10) {
+        hour = '0' + hour
+      }
+      if (minute < 10) {
+        minute = '0' + minute
+      }
+      if (second < 10) {
+        second = '0' + second
+      }
+
+      document.getElementById('time').innerHTML = hour + ':' + minute + ':' + second
+      setTimeout("clock()", 1000)
+    }
+    clock()
+  </script>
+</body>
+
+</html>

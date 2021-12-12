@@ -1,0 +1,33 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.form-student,
+.list-student {
+    width: 500px;
+    border: 1px solid #ccc;
+    margin: 25px;
+    padding: 10px;
+    float: left;
+}
+.list-student {
+    width: 650px;
+}
+h3 {
+    margin-top: 0px;
+}
+.form-student label {
+    width: 100px;
+    float: left;
+}
+.form-student input[type="text"] {
+    margin-bottom: 10px;
+    width: 200px;
+}
+.form-student button {
+    margin: 10px 100px;
+    padding: 10px 20px;
+}
+.error {
+    color: "red";
+}
