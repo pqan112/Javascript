@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Document</title>
   <style>
     #time {
@@ -19,24 +20,34 @@
   <script>
     function clock() {
       const today = new Date()
-      let hour = today.getHours()
+      var hour = today.getHours()
       let minute = today.getMinutes()
       let second = today.getSeconds()
 
-      if (hour < 10) {
-        hour = '0' + hour
-      }
-      if (minute < 10) {
-        minute = '0' + minute
-      }
-      if (second < 10) {
-        second = '0' + second
+
+      // if (hour < 10) {
+      //   hour = '0' + hour
+      // }
+      // if (minute < 10) {
+      //   minute = '0' + minute
+      // }
+      // if (second < 10) {
+      //   second = '0' + second
+      // }
+
+
+      function getPrefix(pref) {
+        if (pref < 10) {
+          return pref = '0' + pref;
+        } else {
+          return pref;
+        }
       }
 
-      document.getElementById('time').innerHTML = hour + ':' + minute + ':' + second
+      document.getElementById('time').innerHTML = getPrefix(hour) + ':' + getPrefix(minute) + ':' + getPrefix(second)
       setTimeout("clock()", 1000)
     }
-    clock()
+    clock();
   </script>
 </body>
 
